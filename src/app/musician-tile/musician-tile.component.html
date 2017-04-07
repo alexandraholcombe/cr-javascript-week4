@@ -2,5 +2,5 @@
   <h4 (click)="goToDetail(musician)">{{musician.name}}</h4>
   <h5>{{musician.instrument}}</h5>
   <div [innerHTML]="truncateBio(musician.bio)"></div>
-  <p><span>Read more</span></p>
+  <p><span (click)="goToDetail(musician)">Read more</span></p>
 </div>
