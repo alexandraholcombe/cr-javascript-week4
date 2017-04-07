@@ -13,6 +13,7 @@
   * bootstrap
   * typescript
   * node-sass
+  * angularfire2
 
 ### **2.  Specs**  
 

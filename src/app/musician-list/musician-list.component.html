@@ -1,3 +1,3 @@
-<p>
-  musician-list works!
-</p>
+<div class="tiles">
+  <musician-tile *ngFor="let musician of allMusicians | async" [musician]="musician"></musician-tile>
+</div>

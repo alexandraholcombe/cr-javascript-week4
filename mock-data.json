@@ -1,0 +1,14 @@
+{ "musicians": [
+  {
+    "name": "Cordula Merks",
+    "instrument": "First Violin",
+    "section": "Strings",
+    "bio": "<p>German violinist Cordula Merks joined the first violin section of the Seattle Symphony in May of 2011.</p><p>Before moving to Seattle, she held concertmaster positions with Germany's Essen Philharmonic, Bochum Symphony and Bergische Symphony. She has served as a guest concertmaster for many orchestras, including the Dresden Philharmonic, Seattle Symphony, West German Radio Orchestra, Cologne Opera and Portuguese National Opera. This last summer she played as part of Claudio Abbado's famous Lucerne Festival Orchestra and toured in Europe as concertmaster of the Mahler Chamber Orchestra.</p><p>When not playing in the orchestra, Merks enjoys playing as a soloist and especially as a chamber musician and has performed in the US, Israel and all over Europe.</p><p>Merks was born in Germany and spent her childhood in Holland. She started playing the violin at the age of 6 and was accepted by the Young Talent Department of the Royal Conservatory in The Hague at the age of 12. Her teachers have included Shmuel Ashkenasi and Herman Krebbers, among others and she holds degrees from the Amsterdam Conservatory and Northern Illinois University.</p><p>She has won prizes at all Dutch national competitions, at various concerto competitions and at several international competitions, including the International Johannes Brahms Competition in Austria.</p><p>Cordula is married to Seattle Symphony contrabassoonist Mike Gamburg, and together they have a daughter, Mia.</p>"
+  },
+  {
+    "name": "Simon James",
+    "instrument": "First Violin",
+    "section": "Strings",
+    "bio": "<p>Second Assistant Concertmaster Simon James has been a member of the Seattle Symphony since 1988; he is also a member of the Australian World Orchestra and was recently guest concertmaster with the Western Australia Symphony Orchestra. In addition to soloing with and acting as concertmaster of the Seattle Symphony on several occasions, James has led the Orchestra in Seattle Opera productions of Der Rosenkavalier, La Bohème and The Flying Dutchman, among others. James is an active teacher with students who have won international competitions and gained entrance to the nation’s most prestigious music schools, including The Juilliard School, and the Curtis, Eastman and Manhattan schools of music. He is a graduate of the Manhattan School of Music, where his teachers included Erick Friedman and Syzmon Goldberg.</p>"
+    }]
+  }
