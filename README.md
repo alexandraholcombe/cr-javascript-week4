@@ -12,6 +12,7 @@
   * bower
   * bootstrap
   * typescript
+  * node-sass
 
 ### **2.  Specs**  
 
