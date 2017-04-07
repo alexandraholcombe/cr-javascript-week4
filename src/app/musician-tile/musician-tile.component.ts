@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Musician } from '../musician.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-musician-tile',
@@ -9,7 +10,7 @@ import { Musician } from '../musician.model';
 export class MusicianTileComponent implements OnInit {
   @Input() musician: Musician;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -24,5 +25,9 @@ export class MusicianTileComponent implements OnInit {
       count += word.length;
       return count <= limit;
     }).join('') + '...';
+  }
+
+  goToDetail(clickedMusician: any) {
+    this.router.navigate(['musicians', clickedMusician.$key]);
   }
 }
