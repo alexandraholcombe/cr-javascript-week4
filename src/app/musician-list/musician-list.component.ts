@@ -20,4 +20,10 @@ export class MusicianListComponent implements OnInit {
   ngOnInit() {
     this.allMusicians = this.musiciansService.getMusicians();
   }
+
+  setTileDisplay() {
+    if (this.currentRoute === '/admin'){
+      return 'block';
+    }
+  }
 }

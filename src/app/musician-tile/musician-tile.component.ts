@@ -30,4 +30,12 @@ export class MusicianTileComponent implements OnInit {
   goToDetail(clickedMusician: any) {
     this.router.navigate(['musicians', clickedMusician.$key]);
   }
+
+  setDisplay() {
+    if (this.currentRoute === '/admin'){
+      return 'block';
+    } else {
+      return 'flex';
+    }
+  }
 }

@@ -1,3 +1,3 @@
-<div class="tiles">
-  <app-musician-tile *ngFor="let musician of allMusicians | async" [musician]="musician"></app-musician-tile>
+<div class="tiles" [attr.display]="setDisplay()">
+  <app-musician-tile *ngFor="let musician of allMusicians | async" [musician]="musician" [attr.display]="setTileDisplay()"></app-musician-tile>
 </div>
