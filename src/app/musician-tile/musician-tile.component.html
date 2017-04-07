@@ -1,6 +1,10 @@
 <div class="musician-tile">
   <h4 (click)="goToDetail(musician)">{{musician.name}}</h4>
-  <h5>{{musician.instrument}}</h5>
-  <div [innerHTML]="truncateBio(musician.bio)"></div>
-  <p><span (click)="goToDetail(musician)">Read more</span></p>
+  <h5>{{musician.instrument}} | {{musician.section}}</h5>
+  <div *ngIf="currentRoute === '/musicians'" [innerHTML]="truncateBio(musician.bio)"></div>
+  <p *ngIf="currentRoute === '/musicians'"><span (click)="goToDetail(musician)">Read more</span></p>
+  <div *ngIf="currentRoute === '/admin'">
+    <p (click)="goToEdit(musician)">Edit</p>
+    <p>Delete</p>
+  </div>
 </div>
