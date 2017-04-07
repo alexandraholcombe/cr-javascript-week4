@@ -1,1 +1,2 @@
-<app-new-musician></app-new-musician>
+<h4 (click)="clickShow()">Add Musician</h4>
+<app-new-musician *ngIf="showAddForm === true" (resetForm)="resetForm()"></app-new-musician>

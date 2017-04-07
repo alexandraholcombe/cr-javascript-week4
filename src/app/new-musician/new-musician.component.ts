@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Musician } from '../musician.model';
 import { MusiciansService } from '../musicians.service';
 import { InstrumentsService } from '../instruments.service';
 import { SectionsService } from '../sections.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-musician',
@@ -11,19 +12,36 @@ import { SectionsService } from '../sections.service';
   providers: [MusiciansService, InstrumentsService, SectionsService]
 })
 export class NewMusicianComponent implements OnInit {
-  constructor(private musiciansService: MusiciansService, private instrumentsService: InstrumentsService, private sectionsService: SectionsService) { }
+  @Output() resetForm = new EventEmitter();
+
+  constructor(
+    private musiciansService: MusiciansService,
+    private instrumentsService: InstrumentsService,
+    private sectionsService: SectionsService,
+    private router: Router
+  ) { }
 
   public allInstruments = this.instrumentsService.getInstruments();
   public allSections = this.sectionsService.getSections();
+  public warning: boolean = false;
 
   ngOnInit() {
   }
 
+  showWarning() {
+    this.warning = true;
+  }
+
   submitNewMusician(name: string, instrument: string, section: string, bio: string) {
-    var newMusician: Musician = new Musician(name, instrument, section, bio);
-    console.log(section);
-    console.log(instrument);
-    this.musiciansService.addMusician(newMusician);
+    if (!name || !bio){
+      this.showWarning();
+    } else {
+      var newMusician: Musician = new Musician(name, instrument, section, bio);
+      this.musiciansService.addMusician(newMusician);
+      this.resetForm.emit();
+      this.router.navigate(['admin']);
+
+    }
   }
 
 }

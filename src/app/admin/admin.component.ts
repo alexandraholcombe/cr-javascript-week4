@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
+  showAddForm: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clickShow() {
+    this.showAddForm = true;
+  }
+
+  resetForm() {
+    this.showAddForm = false;
   }
 
 }

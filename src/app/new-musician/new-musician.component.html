@@ -1,4 +1,5 @@
 <h3>Add New Musician</h3>
+<div class="alert alert-danger" role="alert" *ngIf="warning === true">Please complete all fields.</div>
 <div class="form-group">
   <input class="form-control" type="text" #newName placeholder="Name" required>
 </div>
@@ -18,4 +19,4 @@
   <textarea class="form-control" type="text" #newBio placeholder="Personal Biography" required></textarea>
 </div>
 
-<button type="button" class="btn btn-default" (click)="submitNewMusician(newName.value, newInstrument, newSection, newBio.value)">Add Musician</button>
+<button type="button" class="btn btn-default" (click)="submitNewMusician(newName.value, newInstrument, newSection, newBio.value);">Add Musician</button>
