@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class MusicianTileComponent implements OnInit {
   @Input() musician: Musician;
+  currentRoute: string = this.router.url;
 
   constructor(private router: Router) { }
 
@@ -29,13 +30,5 @@ export class MusicianTileComponent implements OnInit {
 
   goToDetail(clickedMusician: any) {
     this.router.navigate(['musicians', clickedMusician.$key]);
-  }
-
-  setDisplay() {
-    if (this.currentRoute === '/admin'){
-      return 'block';
-    } else {
-      return 'flex';
-    }
   }
 }
