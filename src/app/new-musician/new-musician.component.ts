@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Musician } from '../musician.model';
 import { MusiciansService } from '../musicians.service';
+import { InstrumentsService } from '../instruments.service';
 
 @Component({
   selector: 'app-new-musician',
   templateUrl: './new-musician.component.html',
   styleUrls: ['./new-musician.component.scss'],
-  providers: [MusiciansService]
+  providers: [MusiciansService, InstrumentsService]
 })
 export class NewMusicianComponent implements OnInit {
+  constructor(private musiciansService: MusiciansService, private instrumentsService: InstrumentsService) { }
 
-  constructor(private musiciansService: MusiciansService) { }
+  public allInstruments = this.instrumentsService.getInstruments();
 
   ngOnInit() {
   }
@@ -22,23 +24,6 @@ export class NewMusicianComponent implements OnInit {
     this.musiciansService.addMusician(newMusician);
   }
 
-  public instruments: string[] = [
-    "First Violin",
-    "Second Violin",
-    "Viola",
-    "Cello",
-    "Bass",
-    "Flute",
-    "Oboe",
-    "Clarinet",
-    "Bassoon",
-    "Horn",
-    "Trumpet",
-    "Trombone",
-    "Tuba",
-    "Percussion",
-    "Harp"
-  ]
   public sections: string[] = [
     "Strings",
     "Woodwinds",
