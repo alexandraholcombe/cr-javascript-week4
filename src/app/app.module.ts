@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutComponent } from './about/about.component';
+import { MusiciansComponent } from './musicians/musicians.component';
+import { MusicianListComponent } from './musician-list/musician-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AboutComponent } from './about/about.component';
     HomePageComponent,
     HomePageComponent,
     NavBarComponent,
-    AboutComponent
+    AboutComponent,
+    MusiciansComponent,
+    MusicianListComponent
   ],
   imports: [
     BrowserModule,
