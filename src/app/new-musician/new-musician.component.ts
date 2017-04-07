@@ -32,6 +32,10 @@ export class NewMusicianComponent implements OnInit {
     this.warning = true;
   }
 
+  closeForm() {
+    this.resetForm.emit();
+  }
+
   submitNewMusician(name: string, instrument: string, section: string, bio: string) {
     if (!name || !bio){
       this.showWarning();
