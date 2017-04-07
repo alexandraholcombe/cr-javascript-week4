@@ -1,0 +1,21 @@
+<h3>Add New Musician</h3>
+<div class="form-group">
+  <input class="form-control" type="text" #newName placeholder="Name" required>
+</div>
+<div class="form-group">
+  <label for="section">Section</label>
+  <select class="form-control" #newSection>
+    <option *ngFor="let section of sections" [value]="section">{{section}}</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="instrument">Instrument</label>
+  <select class="form-control" #newSection>
+    <option *ngFor="let instrument of instruments" [value]="instrument">{{instrument}}</option>
+  </select>
+</div>
+<div class="form-group">
+  <textarea class="form-control" type="text" #newBio placeholder="Personal Biography" required></textarea>
+</div>
+
+<button type="button" class="btn btn-default" (click)="submitNewMusician(newName.value, newInstrument.value, newSection.value, newBio.value)">Add Musician</button>

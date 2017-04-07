@@ -5,6 +5,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AboutComponent } from './about/about.component';
 import { MusiciansComponent} from './musicians/musicians.component';
 import { MusicianDetailComponent } from './musician-detail/musician-detail.component';
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
   {
@@ -22,6 +23,10 @@ const appRoutes: Routes = [
   {
     path: 'musicians/:id',
     component: MusicianDetailComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ];
 
