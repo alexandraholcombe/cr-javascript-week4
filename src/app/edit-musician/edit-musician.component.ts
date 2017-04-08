@@ -11,7 +11,7 @@ import { SectionsService } from '../sections.service';
   providers: [MusiciansService, InstrumentsService, SectionsService]
 })
 export class EditMusicianComponent implements OnInit {
-  @Input() musician;
+  @Input() musician: any;
   public allInstruments = this.instrumentsService.getInstruments();
   public allSections = this.sectionsService.getSections();
 

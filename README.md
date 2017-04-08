@@ -6,6 +6,13 @@
 
 ***
 
+## For Instructor
+
+To view project as existed at 5:00 on Friday, please clone branch pre-due-date.
+To view project as completed, please clone master branch.
+
+***
+
 ## Planning
 ### **1.  Configuration/Dependencies**  
   * angular-cli, used for project generation and commands
