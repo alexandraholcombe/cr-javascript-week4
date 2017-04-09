@@ -30,6 +30,11 @@ export class MusiciansService {
       bio: localUpdatedMusician.bio});
   }
 
+  updateTitle(localUpdatedMusician) {
+    var musicianEntryInFirebase = this.getMusicianById(localUpdatedMusician.$key);
+    musicianEntryInFirebase.update({title: localUpdatedMusician.title})
+  }
+
   deleteMusician(musicianToDelete) {
     var musicianEntryInFirebase = this.getMusicianById(musicianToDelete.$key);
     musicianEntryInFirebase.remove();

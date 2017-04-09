@@ -1,0 +1,7 @@
+<h3>Manage Titles for {{musician.name}}</h3>
+<div class="form-group">
+  <input class="form-control" type="text" [(ngModel)]="musician.title" placeholder="Title">
+</div>
+<button type="button" class="btn" (click)="beginSavingTitle(musician);"><i class="glyphicon glyphicon-plus"></i>Save Title</button>
+<button type="button" class="btn" (click)="beginRemovingTitle(musician);"><i class="glyphicon glyphicon-trash"></i>Remove Title</button>
+<button type="button" class="btn" (click)="closeForm()"><i class="glyphicon glyphicon-remove"></i></button>

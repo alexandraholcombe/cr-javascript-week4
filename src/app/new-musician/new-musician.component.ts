@@ -37,9 +37,12 @@ export class NewMusicianComponent implements OnInit {
   }
 
   submitNewMusician(name: string, instrument: string, section: string, bio: string) {
-    if (!name || !bio){
+    if (!name || !instrument || !section){
       this.showWarning();
     } else {
+      if (!bio) {
+        bio = "Seattle Symphony Musician";
+      }
       var newMusician: Musician = new Musician(name, instrument, section, bio);
       this.musiciansService.addMusician(newMusician);
       this.resetForm.emit();

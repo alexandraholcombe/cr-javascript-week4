@@ -12,6 +12,7 @@ export class MusicianTileComponent implements OnInit {
   public currentRoute: string = this.router.url;
   public editing: boolean = false;
   public deleting: boolean = false;
+  public titling: boolean = false;
 
   constructor(private router: Router) { }
 
@@ -47,6 +48,8 @@ export class MusicianTileComponent implements OnInit {
       this.editing = true;
     } else if (variableToChange === 'deleting') {
       this.deleting = true;
+    } else if (variableToChange === 'titling') {
+      this.titling = true;
     }
   }
 
@@ -55,6 +58,8 @@ export class MusicianTileComponent implements OnInit {
       this.editing = false;
     } else if (variableToChange === 'deleting') {
       this.deleting = false;
+    } else if (variableToChange === 'titling') {
+      this.titling = false;
     }
   }
 }

@@ -1,12 +1,15 @@
 <div class="musician-tile">
   <h4 (click)="goToDetail(musician)">{{musician.name}}</h4>
+  <h5 class="title" *ngIf="musician.title">{{musician.title}}</h5>
   <h5>{{musician.instrument}} | {{musician.section}}</h5>
   <div class="musician-bio" *ngIf="currentRoute === '/musicians'" [innerHTML]="truncateBio(musician.bio)"></div>
   <p class="read-more" *ngIf="currentRoute === '/musicians'" (click)="goToDetail(musician)"><span>Read more</span></p>
   <div *ngIf="currentRoute === '/admin'">
     <button class="btn" *ngIf="editing===false" (click)="showComp('editing')"><i class="glyphicon glyphicon-pencil"></i></button>
+    <button class="btn" *ngIf="titling===false" (click)="showComp('titling')"><i class="glyphicon glyphicon-star"></i></button>
     <button class="btn" *ngIf="deleting===false" (click)="showComp('deleting')"><i class="glyphicon glyphicon-trash"></i></button>
     <app-edit-musician *ngIf="editing===true" [musician]="musician" (hideEdit)="hideComp('editing')"></app-edit-musician>
     <app-delete-musician *ngIf="deleting===true" [musician]="musician" (hideDelete)="hideComp('deleting')"></app-delete-musician>
+    <app-add-title *ngIf="titling===true" [musician]="musician" (hideTitle)="hideComp('titling')"></app-add-title>
   </div>
 </div>
