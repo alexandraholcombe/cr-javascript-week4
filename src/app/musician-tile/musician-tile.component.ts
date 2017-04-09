@@ -27,8 +27,16 @@ export class MusicianTileComponent implements OnInit {
     return words.filter(function(word) {
       count += word.length;
       return count <= limit;
-    }).join('') + '...';
+    }).join('') + this.countBio(count, limit);
   }
+
+   countBio(count, limit) {
+     if (count > limit) {
+       return '...';
+     } else {
+       return '';
+     }
+   }
 
   goToDetail(clickedMusician: any) {
     this.router.navigate(['musicians', clickedMusician.$key]);
