@@ -1,8 +1,17 @@
+<select class="form-control" (change)="onSectionChange($event.target.value)">
+  <option value="allSections">All Sections</option>
+  <option *ngFor="let section of allSections" [value]="section.name">{{section.name}}</option>
+</select>
+<select class="form-control" (change)="onInstrumentChange($event.target.value)">
+  <option value="allInstruments">All Instruments</option>
+  <option *ngFor="let instrument of allInstruments" [value]="instrument.name">{{instrument.name}}</option>
+</select>
+
 <button class="btn" (click)="clickShow()" *ngIf="!showAddForm"><i class="glyphicon glyphicon-plus"></i>Add Musician</button>
 <app-new-musician *ngIf="showAddForm === true" (resetForm)="resetForm()"></app-new-musician>
 
 <div class="musicians-list">
-  <div class="musician-admin" *ngFor="let musician of allMusicians | async">
+  <div class="musician-admin" *ngFor="let musician of allMusicians | async | sections: filterBySection : filterByInstrument">
     <app-musician-tile [musician]="musician"></app-musician-tile>
   </div>
 </div>

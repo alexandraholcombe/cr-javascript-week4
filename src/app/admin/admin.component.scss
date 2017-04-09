@@ -21,6 +21,7 @@ app-musician-tile {
 }
 
 button {
+  float: right;
   &:hover {
     background-color: $pink;
     color: white;
@@ -28,4 +29,12 @@ button {
   i {
     margin-right: 5%;
   }
+}
+
+select {
+  min-width: 200px;
+  width: 25%;
+  margin-top: 0px;
+  display: inline-block;
+  margin-right: 1%;
 }
