@@ -1,6 +1,16 @@
 <div class="container">
   <h1>Seattle Symphony</h1>
-  <nav-bar></nav-bar>
+</div>
+<nav-bar></nav-bar>
+
+<div *ngIf="router.url === '/'" class="image-box">
+  <div class="image-box-2">
+    <img src="http://www.seattlesymphony.org/~/media/images/eventbanner880x399/opengraphdefaultimage.jpg" alt="Seattle Symphony Performance">
+    <img src="https://s3.amazonaws.com/IE-logo/seattlesymphony.png" alt="Seattle Symphony Logo" class="logo">
+  </div>
+</div>
+
+<div class="container">
   <router-outlet></router-outlet>
 </div>
 
