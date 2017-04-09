@@ -23,11 +23,16 @@ export class MusiciansService {
   }
 
   updateMusician(localUpdatedMusician){
-  var musicianEntryInFirebase = this.getMusicianById(localUpdatedMusician.$key);
-  musicianEntryInFirebase.update({name: localUpdatedMusician.name,
-                              instrument: localUpdatedMusician.instrument,
-                              section: localUpdatedMusician.section,
-                              bio: localUpdatedMusician.bio});
-}
+    var musicianEntryInFirebase = this.getMusicianById(localUpdatedMusician.$key);
+    musicianEntryInFirebase.update({name: localUpdatedMusician.name,
+      instrument: localUpdatedMusician.instrument,
+      section: localUpdatedMusician.section,
+      bio: localUpdatedMusician.bio});
+  }
+
+  deleteMusician(musicianToDelete) {
+    var musicianEntryInFirebase = this.getMusicianById(musicianToDelete.$key);
+    musicianEntryInFirebase.remove();
+  }
 
 }
