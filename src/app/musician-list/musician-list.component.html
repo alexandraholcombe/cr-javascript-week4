@@ -1,9 +1,6 @@
-<select class="form-control" (change)="onChange($event.target.value)">
+<select class="form-control" (change)="onSectionChange($event.target.value)">
   <option value="allMusicians">All Musicians</option>
-  <option value="stringMusicians">Strings</option>
-  <option value="windMusicians">Woodwinds</option>
-  <option value="brassMusicians">Brass</option>
-  <option value="percussionMusicians">Percussion</option>
+  <option *ngFor="let section of allSections" [value]="section.name">{{section.name}}</option>
 </select>
 <div class="tiles" [attr.display]="setDisplay()">
   <app-musician-tile *ngFor="let musician of allMusicians | async | sections:filterBySection" [musician]="musician" [attr.display]="setTileDisplay()"></app-musician-tile>
