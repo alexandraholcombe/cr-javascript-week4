@@ -1,0 +1,9 @@
+$pink: #ea0e8d;
+$gray: #e1e3e4;
+
+button {
+  &:hover, &:active, &:focus {
+    background-color: $pink;
+    color: white;
+  }
+}
