@@ -46,10 +46,16 @@ export class MusicianTileComponent implements OnInit {
   showComp(variableToChange) {
     if (variableToChange === 'editing') {
       this.editing = true;
+      this.deleting = false;
+      this.titling = false;
     } else if (variableToChange === 'deleting') {
       this.deleting = true;
+      this.editing = false;
+      this.titling = false;
     } else if (variableToChange === 'titling') {
       this.titling = true;
+      this.editing = false;
+      this.deleting = false;
     }
   }
 
