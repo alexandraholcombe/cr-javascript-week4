@@ -1,4 +1,4 @@
-<h4 (click)="clickShow()">Add Musician</h4>
+<button class="btn" (click)="clickShow()" *ngIf="!showAddForm"><i class="glyphicon glyphicon-plus"></i>Add Musician</button>
 <app-new-musician *ngIf="showAddForm === true" (resetForm)="resetForm()"></app-new-musician>
 
 <div class="musicians-list">

@@ -4,8 +4,8 @@
   <div *ngIf="currentRoute === '/musicians'" [innerHTML]="truncateBio(musician.bio)"></div>
   <p *ngIf="currentRoute === '/musicians'"><span (click)="goToDetail(musician)">Read more</span></p>
   <div *ngIf="currentRoute === '/admin'">
-    <p *ngIf="editing===false" (click)="showComp('editing')">Edit</p>
-    <p *ngIf="deleting===false" (click)="showComp('deleting')">Delete</p>
+    <button class="btn" *ngIf="editing===false" (click)="showComp('editing')"><i class="glyphicon glyphicon-pencil"></i></button>
+    <button class="btn" *ngIf="deleting===false" (click)="showComp('deleting')"><i class="glyphicon glyphicon-trash"></i></button>
     <app-edit-musician *ngIf="editing===true" [musician]="musician" (hideEdit)="hideComp('editing')"></app-edit-musician>
     <app-delete-musician *ngIf="deleting===true" [musician]="musician" (hideDelete)="hideComp('deleting')"></app-delete-musician>
   </div>

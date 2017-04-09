@@ -39,6 +39,12 @@ export class MusicianListComponent implements OnInit {
     }
   }
 
+  setBorder() {
+    if (this.currentRoute === '/admin') {
+      return {'border': 'none !important'};
+    }
+  }
+
   onChange(optionFromMenu) {
     this.filterBySection = optionFromMenu;
   }
