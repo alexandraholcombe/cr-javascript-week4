@@ -1,4 +1,11 @@
 .tiles {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+select {
+  min-width: 200px;
+  width: 25%;
+  margin-top: 15px;
 }
