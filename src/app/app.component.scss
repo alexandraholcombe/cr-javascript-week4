@@ -1,10 +1,24 @@
+$pink: #ea0e8d;
+$gray: #e1e3e4;
+
+:host {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .footer {
   position: absolute;
   width: 100%;
   height: 40px;
-  background-color: #f5f5f5;
-  padding: 15px;
+  background-color: $gray;
+  padding: 10px;
   bottom: 0;
+  text-transform: uppercase;
+  a:hover {
+    color: $pink;
+  }
+  a:hover, a:active, a:focus {
+    text-decoration: none;
+  }
 }
 
 :host {
@@ -19,11 +33,13 @@ app-musicians {
 
 .heading-logo-text {
   max-width: 40%;
+  cursor: pointer;
 }
 
 .heading-logo {
   max-width: 3%;
   margin-left: -1%;
+  cursor: pointer;
 }
 
 div.image-box {
@@ -52,4 +68,14 @@ div.image-box {
       padding-bottom: 10%;
     }
   }
+}
+
+:host /deep/ h2 {
+  font-weight: 700;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+h4 /deep/ {
+  color: $pink;
 }

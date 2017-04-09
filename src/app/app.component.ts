@@ -18,5 +18,9 @@ export class AppComponent implements OnInit {
     console.log(this.currentRoute);
   }
 
+  goHome() {
+    this.router.navigate(['']);
+  }
+
   title = 'app works!';
 }

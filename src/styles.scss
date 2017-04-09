@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+$pink: #ea0e8d;
+$gray: #e1e3e4;
 
 html, body {
   min-height:100%;
@@ -16,4 +19,8 @@ body, app-root {
 //I don't know what's working, so I'm just going to leave it!
 app-root {
   position: relative;
+}
+
+div /deep/ {
+  font-family: 'Open Sans', sans-serif;
 }

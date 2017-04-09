@@ -1,18 +1,24 @@
 $pink: #ea0e8d;
+$gray: #e1e3e4;
 
 nav {
-  // border-top-color: #e1e3e4;
-  border-bottom-color: #e1e3e4;
-  // border-top-width: 3px;
+  border-bottom-color: $gray;
   border-bottom-width: 3px;
   border-radius: 0;
   background-color: white;
+  .navbar-header {
+    text-align: center;
+    margin: 0 auto;
+    a {
+      display: block;
+      margin: 0 auto;
+    }
+  }
   li {
     margin: auto 15px;
   }
   a {
     color: $pink;
-    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     font-size: 1.2em;
   }

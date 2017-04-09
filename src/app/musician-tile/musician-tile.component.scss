@@ -1,9 +1,27 @@
+$pink: #ea0e8d;
+$gray: #e1e3e4;
+
 :host {
   width: 30%;
-  outline: 1px solid red;
-  margin: 1.6%;
+  border: 1px solid $gray;
+  border-bottom-width: 3px;
+  margin: 1%;
+  padding: 1%;
 }
 
 h4, span {
   cursor: pointer;
+}
+
+h4 {
+  color: $pink;
+  font-weight: 700;
+  text-transform: uppercase;
+  &:hover {
+    color: #333;
+  }
+}
+
+span:hover {
+  color: $pink;
 }
