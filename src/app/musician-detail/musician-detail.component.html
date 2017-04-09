@@ -1,3 +1,6 @@
 <h2>{{(musicianToDisplay | async)?.name}}</h2>
-<h3>{{(musicianToDisplay | async)?.instrument}}</h3>
+<div class="title-and-instrument">
+  <h3>{{(musicianToDisplay | async)?.instrument}}</h3>
+  <h3 *ngIf="(musicianToDisplay | async)?.title" class="title">{{(musicianToDisplay | async)?.title}}</h3>
+</div>
 <div class="musician-bio" [innerHTML]="(musicianToDisplay | async)?.bio"></div>
