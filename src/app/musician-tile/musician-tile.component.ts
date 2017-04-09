@@ -9,8 +9,9 @@ import { Router } from '@angular/router';
 })
 export class MusicianTileComponent implements OnInit {
   @Input() musician: Musician;
-  currentRoute: string = this.router.url;
-  editing = false;
+  public currentRoute: string = this.router.url;
+  public editing: boolean = false;
+  public deleting: boolean = false;
 
   constructor(private router: Router) { }
 
@@ -33,11 +34,19 @@ export class MusicianTileComponent implements OnInit {
     this.router.navigate(['musicians', clickedMusician.$key]);
   }
 
-  showEdit() {
-    this.editing = true;
+  showComp(variableToChange) {
+    if (variableToChange === 'editing') {
+      this.editing = true;
+    } else if (variableToChange === 'deleting') {
+      this.deleting = true;
+    }
   }
 
-  hideEdit() {
-    this.editing = false;
+  hideComp(variableToChange) {
+    if (variableToChange === 'editing') {
+      this.editing = false;
+    } else if (variableToChange === 'deleting') {
+      this.deleting = false;
+    }
   }
 }
