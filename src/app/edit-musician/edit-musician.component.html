@@ -1,21 +1,23 @@
 <h3>Edit {{musician.name}}</h3>
+<div class="alert alert-danger" role="alert" *ngIf="warning === true">Please complete all fields.</div>
 <div class="form-group">
   <input class="form-control" type="text" [(ngModel)]="musician.name" placeholder="Name">
 </div>
 <div class="form-group">
   <label for="section">Section</label>
-  <select class="form-control" [(ngModel)]="newSection">
-    <option *ngFor="let section of allSections" [value]="section.name">{{section.name}}</option>
+  <select class="form-control" [(ngModel)]="musician.section">
+    <option *ngFor="let section of allSections" [value]="section.name" [selected]="section.name === musician.section">{{section.name}}</option>
   </select>
 </div>
 <div class="form-group">
   <label for="instrument">Instrument</label>
-  <select class="form-control" [(ngModel)]="newInstrument">
-    <option *ngFor="let instrument of allInstruments" [value]="instrument.name">{{instrument.name}}</option>
+  <select class="form-control" [(ngModel)]="musician.instrument">
+    <option *ngFor="let instrument of allInstruments" [value]="instrument.name" [selected]="instrument.name === musician.instrument">{{instrument.name}}</option>
   </select>
 </div>
 <div class="form-group">
-  <textarea class="form-control" type="text" #newBio placeholder="Personal Biography" required></textarea>
+  <textarea class="form-control" type="text" [(ngModel)]="musician.bio" ngDefaultControl placeholder="Personal Biography"></textarea>
 </div>
 
-<button type="button" class="btn btn-default" (click)="submitNewMusician(newName.value, newInstrument, newSection, newBio.value);">Add Musician</button> <button type="button" class="btn btn-danger" (click)="closeForm()">Cancel</button>
+<button type="button" class="btn btn-default" (click)="beginUpdatingMusician(musician)">Update Musician</button>
+<button type="button" class="btn btn-danger" (click)="closeForm()">Close</button>

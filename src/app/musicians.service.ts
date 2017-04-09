@@ -22,4 +22,12 @@ export class MusiciansService {
     this.musicians.push(musicianToAdd);
   }
 
+  updateMusician(localUpdatedMusician){
+  var musicianEntryInFirebase = this.getMusicianById(localUpdatedMusician.$key);
+  musicianEntryInFirebase.update({name: localUpdatedMusician.name,
+                              instrument: localUpdatedMusician.instrument,
+                              section: localUpdatedMusician.section,
+                              bio: localUpdatedMusician.bio});
+}
+
 }

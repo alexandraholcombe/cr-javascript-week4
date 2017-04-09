@@ -44,7 +44,6 @@ export class NewMusicianComponent implements OnInit {
       this.musiciansService.addMusician(newMusician);
       this.resetForm.emit();
       this.router.navigate(['admin']);
-
     }
   }
 

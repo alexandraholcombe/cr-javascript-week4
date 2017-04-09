@@ -4,9 +4,5 @@
 <div class="musicians-list">
   <div class="musician-admin" *ngFor="let musician of allMusicians | async">
     <app-musician-tile [musician]="musician"></app-musician-tile>
-    <div>
-      <p>Edit</p>
-      <p>Delete</p>
-    </div>
   </div>
 </div>
