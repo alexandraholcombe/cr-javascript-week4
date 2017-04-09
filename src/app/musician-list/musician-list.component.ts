@@ -20,8 +20,8 @@ import { Router } from '@angular/router';
 export class MusicianListComponent implements OnInit {
   public allMusicians: FirebaseListObservable<any[]>;
   public currentRoute = this.router.url;
-  public filterBySection = 'allMusicians';
-  public filterByInstrument = 'allMusicians';
+  public filterBySection = 'allSections';
+  public filterByInstrument = 'allInstruments';
   public allSections: Section[];
   public allInstruments: Instrument[];
 

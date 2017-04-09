@@ -1,11 +1,11 @@
 <select class="form-control" (change)="onSectionChange($event.target.value)">
-  <option value="allMusicians">All Sections</option>
+  <option value="allSections">All Sections</option>
   <option *ngFor="let section of allSections" [value]="section.name">{{section.name}}</option>
 </select>
 <select class="form-control" (change)="onInstrumentChange($event.target.value)">
-  <option value="allMusicians">All Instruments</option>
+  <option value="allInstruments">All Instruments</option>
   <option *ngFor="let instrument of allInstruments" [value]="instrument.name">{{instrument.name}}</option>
 </select>
 <div class="tiles" [attr.display]="setDisplay()">
-  <app-musician-tile *ngFor="let musician of allMusicians | async | sections:filterBySection" [musician]="musician" [attr.display]="setTileDisplay()"></app-musician-tile>
+  <app-musician-tile *ngFor="let musician of allMusicians | async | sections: filterBySection : filterByInstrument" [musician]="musician" [attr.display]="setTileDisplay()"></app-musician-tile>
 </div>

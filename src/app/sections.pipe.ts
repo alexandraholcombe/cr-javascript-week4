@@ -7,11 +7,22 @@ import { Musician } from './musician.model';
 })
 export class SectionsPipe implements PipeTransform {
 
-  transform(input: any[], desiredSection: string) {
-    var output: any[]=[];
-    if(desiredSection === 'allMusicians') {
+  transform(input: any[], desiredSection: string, desiredInstrument: string) {
+    let output: any[] = [];
+    if ((desiredSection === 'allSections') && (desiredInstrument === 'allInstruments')) {
       return input;
-    } else {
+    }
+
+    if (desiredSection === 'allSections') {
+      for (let i = 0; i < input.length; i++) {
+        if (input[i].instrument === desiredInstrument) {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    }
+
+    if (desiredInstrument === 'allInstruments') {
       for (let i = 0; i < input.length; i++) {
         if (input[i].section === desiredSection) {
           output.push(input[i]);
@@ -19,6 +30,13 @@ export class SectionsPipe implements PipeTransform {
       }
       return output;
     }
+
+    for (let i = 0; i < input.length; i++) {
+      if ((input[i].section === desiredSection) && (input[i].instrument === desiredInstrument)) {
+        output.push(input[i]);
+      }
+    }
+    return output;
   }
 
 }
