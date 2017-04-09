@@ -30,13 +30,13 @@ export class MusicianTileComponent implements OnInit {
     }).join('') + this.countBio(count, limit);
   }
 
-   countBio(count, limit) {
-     if (count > limit) {
-       return '...';
-     } else {
-       return '';
-     }
-   }
+  countBio(count, limit) {
+    if (count > limit) {
+      return '...';
+    } else {
+      return '';
+    }
+  }
 
   goToDetail(clickedMusician: any) {
     this.router.navigate(['musicians', clickedMusician.$key]);

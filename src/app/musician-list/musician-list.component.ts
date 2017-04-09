@@ -12,8 +12,9 @@ import { Router } from '@angular/router';
 })
 
 export class MusicianListComponent implements OnInit {
-  allMusicians: FirebaseListObservable<any[]>;
-  currentRoute: string = this.router.url;
+  public allMusicians: FirebaseListObservable<any[]>;
+  public currentRoute: string = this.router.url;
+  public filterBySection: string = 'allMusicians';
 
   constructor(
     private musiciansService: MusiciansService,
@@ -36,5 +37,9 @@ export class MusicianListComponent implements OnInit {
     if (this.currentRoute === '/admin'){
       return 'block';
     }
+  }
+
+  onChange(optionFromMenu) {
+    this.filterBySection = optionFromMenu;
   }
 }

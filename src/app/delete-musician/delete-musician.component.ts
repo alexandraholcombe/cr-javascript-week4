@@ -8,16 +8,16 @@ import { MusiciansService } from '../musicians.service';
   styleUrls: ['./delete-musician.component.scss'],
   providers: [MusiciansService]
 })
+
 export class DeleteMusicianComponent implements OnInit {
   @Input() musician: any;
   @Output() hideDelete = new EventEmitter();
 
 
   constructor(private musiciansService: MusiciansService
-              ) { }
+  ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   clickDelete(musician) {
     this.musiciansService.deleteMusician(musician);

@@ -19,6 +19,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NewMusicianComponent } from './new-musician/new-musician.component';
 import { EditMusicianComponent } from './edit-musician/edit-musician.component';
 import { DeleteMusicianComponent } from './delete-musician/delete-musician.component';
+import { SectionsPipe } from './sections.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -41,7 +42,8 @@ export const firebaseConfig = {
     AdminComponent,
     NewMusicianComponent,
     EditMusicianComponent,
-    DeleteMusicianComponent
+    DeleteMusicianComponent,
+    SectionsPipe
   ],
   imports: [
     BrowserModule,
