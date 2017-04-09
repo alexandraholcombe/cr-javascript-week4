@@ -17,14 +17,22 @@ app-musicians {
   margin-bottom: 40px;
 }
 
+.heading-logo-text {
+  max-width: 40%;
+}
+
+.heading-logo {
+  max-width: 3%;
+  margin-left: -1%;
+}
+
 div.image-box {
   position: relative;
   width: 100%;
   background-image: url('assets/images/bgimg.png');
-  div.image-box-2 {
+  div.container {
     position: relative;
     margin: 0 auto;
-    width: 75%;
     img {
       display: block;
       margin: 0 auto;

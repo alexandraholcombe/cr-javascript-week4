@@ -1,0 +1,19 @@
+$pink: #ea0e8d;
+
+nav {
+  // border-top-color: #e1e3e4;
+  border-bottom-color: #e1e3e4;
+  // border-top-width: 3px;
+  border-bottom-width: 3px;
+  border-radius: 0;
+  background-color: white;
+  li {
+    margin: auto 15px;
+  }
+  a {
+    color: $pink;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2em;
+  }
+}
