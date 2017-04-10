@@ -15,5 +15,6 @@ export const INSTRUMENTS: Instrument[] = [
  new Instrument("Trombone", "Brass"),
  new Instrument("Tuba", "Brass"),
  new Instrument("Percussion", "Percussion"),
+ new Instrument("Timpani", "Percussion"),
  new Instrument("Harp", "Strings")
 ];
