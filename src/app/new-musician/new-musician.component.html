@@ -1,22 +1,24 @@
-<h3>Add New Musician</h3>
-<div class="alert alert-danger" role="alert" *ngIf="warning === true">Please complete all fields.</div>
-<div class="form-group">
-  <input class="form-control" type="text" #newName placeholder="Name" required>
-</div>
-<div class="form-group">
-  <label for="section">Section</label>
-  <select class="form-control" [(ngModel)]="newSection">
-    <option *ngFor="let section of allSections" [value]="section.name">{{section.name}}</option>
-  </select>
-</div>
-<div class="form-group">
-  <label for="instrument">Instrument</label>
-  <select class="form-control" [(ngModel)]="newInstrument">
-    <option *ngFor="let instrument of allInstruments" [value]="instrument.name">{{instrument.name}}</option>
-  </select>
-</div>
-<div class="form-group">
-  <textarea class="form-control" type="text" #newBio placeholder="Personal Biography" required></textarea>
-</div>
+<div class="add-box">
+  <h3>Add New Musician</h3>
+  <div class="alert alert-danger" role="alert" *ngIf="warning === true">Please complete all fields.</div>
+  <div class="form-group">
+    <input class="form-control" type="text" #newName placeholder="Name" required>
+  </div>
+  <div class="form-group">
+    <label for="section">Section</label>
+    <select class="form-control" [(ngModel)]="newSection">
+      <option *ngFor="let section of allSections" [value]="section.name">{{section.name}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="instrument">Instrument</label>
+    <select class="form-control" [(ngModel)]="newInstrument">
+      <option *ngFor="let instrument of allInstruments" [value]="instrument.name">{{instrument.name}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" type="text" #newBio placeholder="Personal Biography" required></textarea>
+  </div>
 
-<button type="button" class="btn" (click)="submitNewMusician(newName.value, newInstrument, newSection, newBio.value);"><i class="glyphicon glyphicon-plus"></i>Add Musician</button> <button type="button" class="btn" (click)="closeForm()"><i class="glyphicon glyphicon-remove"></i></button>
+  <button type="button" class="btn" (click)="submitNewMusician(newName.value, newInstrument, newSection, newBio.value);"><i class="glyphicon glyphicon-plus"></i>Add Musician</button> <button type="button" class="btn" (click)="closeForm()"><i class="glyphicon glyphicon-remove"></i></button>
+</div>
