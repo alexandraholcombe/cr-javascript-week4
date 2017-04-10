@@ -25,6 +25,10 @@ export class MusicianDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.musicianId = urlParameters['id'];
     });
-    this.musicianToDisplay = this.musiciansService.getMusicianById(this.musicianId);
+    this.musicianToDisplay = this.musiciansService.getMusicianById(this.musicianId).subscribe(dataLastEmittedFromObserver => {
+      this.musicianToDisplay = dataLastEmittedFromObserver;
+
+      console.log(this.musicianToDisplay);
+    });
   }
 }
